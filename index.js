@@ -11,21 +11,23 @@ function checkBirthdateLuck(){
     if(sum && dob){
         compareValues(sum,luckyNumber.value);
     }
-    
-    
-    else{
+     else{
         outputBox.innerText="Enter both fields"
     }
 }
 
 function compareValues(sum, luckyNumber){
+    if (sum && luckyNumber){
+
     
     if(sum % luckyNumber ===0){
         outputBox.innerText="Your Birthdate is Lucky"
     } else{
         outputBox.innerText= "Your birthdate is not lucky"
     }
-    
+}else{
+    outputBox.innerText ="Enter the  both fields"
+}
 }
 
 function calculateSum(dob){
